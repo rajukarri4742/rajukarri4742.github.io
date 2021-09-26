@@ -1,0 +1,133 @@
+<!--<p>
+  <button style="margin-right:5px" class="btn-sm btn-primary m-l-5" type="button" *ngFor="let item of sideMenuList" (click)="getData(item)" aria-controls="collapseExample">
+    {{item}}
+  </button>
+</p>
+<div>
+  <div class="card card-body">
+    <!--<p>   another collapse start here </p>
+    <h5>{{subTitle}}</h5>
+    <div id="accordion">
+      <div class="card">
+        <div class="card-header" id="headingOne">
+          <h5 class="mb-0">
+            <button class="btn btn-link" data-toggle="collapse" data-target="#ProblemStatement" aria-expanded="true" aria-controls="ProblemStatement">
+              Problem Statement
+            </button>
+          </h5>
+        </div>
+
+        <div id="ProblemStatement" class="collapse show" aria-labelledby="headingOne">
+          <div class="card-body">
+            {{programStatement}}
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingTwo">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#InputOutput" aria-expanded="false" aria-controls="InputOutput">
+              Sample Input & Output
+            </button>
+          </h5>
+        </div>
+        <div id="InputOutput" class="collapse" aria-labelledby="headingTwo">
+          <div class="card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header" id="headingThree">
+          <h5 class="mb-0">
+            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#Program" aria-expanded="false" aria-controls="Program">
+              Program
+            </button>
+          </h5>
+        </div>
+        <div id="Program" class="collapse" aria-labelledby="headingThree">
+          <div class="card-body">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!--<p>   another collapse end here </p>
+  </div>
+</div>-->
+<div class="row">
+  <div class="col-md-2 nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+    <a class="nav-link" *ngFor="let item of sideMenuList" id="v-pills-home-tab" data-toggle="pill" href="#v-pills-home" (click)="getALLData(item)" role="tab" aria-controls="v-pills-home">{{item.name}}</a>
+    <!--<a class="nav-link" id="v-pills-profile-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-profile" aria-selected="false">Profile</a>
+    <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-messages" aria-selected="false">Messages</a>
+    <a class="nav-link" id="v-pills-settings-tab" data-toggle="pill" href="#v-pills-home" role="tab" aria-controls="v-pills-settings" aria-selected="false">Settings</a>-->
+  </div>
+  <div class="col-md-10 tab-content" id="v-pills-tabContent">
+    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+
+      <p>
+        <button style="margin-right:5px;margin-bottom:5px" type="button" *ngFor="let program of listOfPrograms" (click)="getData(program)" [ngClass]="(subTitle==program)?'btn-sm btn-primary m-l-5':'btn-sm btn-light m-l-5'" aria-controls="collapseExample">
+          {{program}}
+        </button>
+      </p>
+      <div>
+        <div class="card card-body">
+          <!--<p>   another collapse start here </p>-->
+          <h5>{{subTitle}}</h5>
+          <div id="accordion">
+            <div class="card">
+              <div class="card-header" id="headingOne">
+                <h5 class="mb-0">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#ProblemStatement" aria-expanded="true" aria-controls="ProblemStatement">
+                    Problem Statement
+                  </button>
+                </h5>
+              </div>
+
+              <div id="ProblemStatement" class="collapse show" aria-labelledby="headingOne">
+                <div class="card-body">
+                  {{programStatement}}
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingTwo">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#InputOutput" aria-expanded="false" aria-controls="InputOutput">
+                    Sample Input & Output
+                  </button>
+                </h5>
+              </div>
+              <div id="InputOutput" class="collapse" aria-labelledby="headingTwo">
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-header" id="headingThree">
+                <h5 class="mb-0">
+                  <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#Program" aria-expanded="false" aria-controls="Program">
+                    Program
+                  </button>
+                </h5>
+              </div>
+              <div id="Program" class="collapse" aria-labelledby="headingThree">
+                <div class="card-body">
+                  Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <!--<p>   another collapse end here </p>-->
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </div>
