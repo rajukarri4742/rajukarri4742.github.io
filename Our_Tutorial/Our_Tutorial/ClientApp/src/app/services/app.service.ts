@@ -9,7 +9,7 @@ export class AppService {
   public listOfTopics = [
     {
       "name": "Basic Programs",
-      "listOfPrograms": ["Even or Odd", "Grater than 3 numbers & smaller than 3 numbers", "Reverse of number", "Palindrome", "Armstrong Number", "Neon number", "SPY Number", "Automorphic number"],
+      "listOfPrograms": ["Even or Odd", "Grater than 3 numbers","Smaller than 3 numbers", "Reverse of number", "Palindrome", "Armstrong Number", "Neon number", "SPY Number", "Automorphic number"],
     },
     {
       "name": "Array Programs",

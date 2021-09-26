@@ -11,6 +11,9 @@ import { CounterComponent } from './counter/counter.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { CommonComponent } from './common/common.component';
 import { AppService } from './services/app.service';
+import { SampleInputOutputComponent } from './sample-input-output/sample-input-output.component';
+import { ProblemStatementComponent } from './problem-statement/problem-statement.component';
+import { ProgramComponent } from './program/program.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,10 @@ import { AppService } from './services/app.service';
     HomeComponent,
     CounterComponent,
     FetchDataComponent,
-    CommonComponent
+    CommonComponent,
+    SampleInputOutputComponent,
+    ProgramComponent,
+    ProblemStatementComponent
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
