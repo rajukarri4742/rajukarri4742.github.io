@@ -1,1 +1,4 @@
-<p> sample input and output .....</p>
+<div>
+  <div style="margin-left:40px" *ngFor="let item of inputOutstatement">
+    <b *ngIf="item=='Input:' || item=='Output:'">{{item}}</b><p *ngIf="item!='Input:' || item!='Output:'">{{item}}</p></div>
+</div>
